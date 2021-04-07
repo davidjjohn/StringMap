@@ -13,7 +13,7 @@ public class HashStringMap implements StringMap {
 
     private Object[] buckets;  // array of KeyValueLink<String,String> objects
     private int nBuckets;       // physical size of array buckets
-
+    private final String title = "HashStringMap";
     private int probes;
 
 
@@ -59,4 +59,6 @@ public class HashStringMap implements StringMap {
         }
         return null;
     }
+
+    public String toString(){return title;}
 }

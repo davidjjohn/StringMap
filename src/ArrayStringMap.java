@@ -12,8 +12,9 @@ import java.util.ArrayList;
 
 public class ArrayStringMap implements StringMap {
 
-    private ArrayList<KeyValuePair<String,String>> bindings;
 
+    private ArrayList<KeyValuePair<String,String>> bindings;
+    private final String title = "ArrayListMap";
     private int probes;     // count comparisons
 
     // constructor, O(1)
@@ -57,4 +58,6 @@ public class ArrayStringMap implements StringMap {
         }
         return -1;
     }
+
+    public String toString(){return title;}
 }

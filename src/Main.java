@@ -12,18 +12,24 @@ public class Main {
     // testing routine
     public static void main(String[] args) {
 
-        ArrayStringMapExample();
+        StringMap ASM = new ArrayStringMap();
+        StringMapExample(ASM);
+
         System.out.println();
-        HashStringMapExample();
+
+        ASM = new HashStringMap();       // think about what this has done
+        StringMapExample(ASM);
     }
 
-    public static void ArrayStringMapExample(){
+    // method to create and test StringMap
+    public static void StringMapExample(StringMap myStringMap){
 
         // create and initialize myStringMap for array based hashing
-        ArrayStringMap myStringMap = new ArrayStringMap();
+        //StringMap myStringMap = new ArrayStringMap();
         setup(myStringMap);
 
-        System.out.println("Test of ArrayStringMap");
+        System.out.println();
+        System.out.println("****  TEST OF "+myStringMap);
         System.out.println();
 
         double psum = 0.0;      // set initial number of probes
@@ -41,29 +47,7 @@ public class Main {
         System.out.printf("Average number of probes: %9.2f%n",psum/mykeylist.length);
     }
 
-    public static void HashStringMapExample(){
 
-        // create and initialize myStringMap as for linked hashing
-        HashStringMap myStringMap = new HashStringMap();
-        setup(myStringMap);
-
-        System.out.println("Test of ArrayStringMap");
-        System.out.println();
-
-        double psum = 0.0;
-
-        // report of number of probes based on search list of keys
-        for (String mykey : mykeylist){
-            System.out.print(mykey+ " : ");
-            String theValue = myStringMap.get(mykey);
-            System.out.printf("%15s",(theValue != null) ? theValue : "null");
-            System.out.println(" : "+myStringMap.getProbes());
-            psum += myStringMap.getProbes();
-        }
-
-        System.out.printf("%nTotal number of probes: %8.0f%n",psum);
-        System.out.printf("Average number of probes: %9.2f%n",psum/mykeylist.length);
-    }
 
     private static void setup(StringMap myStringMap){
         myStringMap.put("AK", "Alaska");
