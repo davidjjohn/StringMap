@@ -23,8 +23,7 @@ public class ArrayStringMap implements StringMap {
     }
 
     // enter a new key value pair or replace the value associated
-    // with the key
-    // put() calls findCell(), so the runtime complexity
+    // with the key, put() calls findCell(), so the runtime complexity
     // of put() is O(N)
     public void put(String key, String value){
         int index = findCell(key);
@@ -37,9 +36,8 @@ public class ArrayStringMap implements StringMap {
         }
     }
 
-    // find a value associated with key or null
-    // get() calls get(), so its runtme complexity
-    // is O(N)
+    // find a value associated with key or null, get() calls get() hence
+    // its runtme complexity is O(N)
     public String get(String key){
         int index = findCell(key);
         return (index==-1)? null : bindings.get(index).getValue();
