@@ -53,7 +53,7 @@ public class HashStringMap implements StringMap {
     private KeyValueLink<String,String> findCell(int bucket, String key){
         this.probes = 0;
         for(KeyValueLink<String,String> cp = (KeyValueLink<String,String>)buckets[bucket];
-            cp != null; cp = cp.getLink()){
+                cp != null; cp = cp.getLink()){
             probes++;
             if (cp.getKey().equals(key)) return cp;      // found it and return Cell
         }

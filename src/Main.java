@@ -11,7 +11,7 @@ import java.util.NoSuchElementException;
 public class Main {
 
     // for testing search for these keys
-    private static final String[] mykeylist = {"CA", "VA", "NY", "AK", "TN", "WI", "PR", "CT"};
+    private static final String[] mykeylist = {"CA", "VA", "NY", "CO","NY", "AK", "TN", "WI", "PR", "CT"};
 
     // testing routine
     public static void main(String[] args) {

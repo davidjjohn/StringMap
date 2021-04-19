@@ -20,7 +20,7 @@ public class KeyValueLink<K,V> extends KeyValuePair<K,V> {
     // alternate constructor
     public KeyValueLink(K key, V value){
         super(key, value);
-        link = null;
+        this.link = null;
     }
 
     // getter and setter for link
