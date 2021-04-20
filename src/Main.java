@@ -57,7 +57,7 @@ public class Main {
 
         Scanner StateData = null;
         try {
-            StateData = new Scanner(new FileReader("src/StateInfo.txt"));
+            StateData = new Scanner(new FileReader("src/CountryInfo.txt"));
         } catch (FileNotFoundException e) {
             System.out.println("Illegal input file name");
             System.exit(77);
